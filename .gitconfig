@@ -1,10 +1,45 @@
 [user]
 	name = Gustavo Moraes
 	email = gustavosotnas1@gmail.com
+[credential]
+	helper = cache --timeout=86400
+[push]
+	default = matching
+[core]
+[pull]
+	rebase = true
 [alias]
+# shows list of files that have a merge conflict
+	conflicts = diff --name-only --diff-filter=U
+	changes = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+# unstages a file. use like 'git unstage filename'
+	unstage = reset HEAD --
+
+# resets all uncomitted changes and files
+	abort = reset --hard HEAD
+
+# shows diff only for files staged to commit
+	new = diff --cached
+
+# shows only changes to files in current directory
+	here = status .
+
+# undo last commit
+	undo = reset HEAD~1
+
+# change last commit message
+	recommit = commit --amend
+
+# rebased commits will have the same Author and AuthorDate that Commiter and CommitDate
 	format-branch = "filter-branch -f --env-filter 'GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME; GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL; export GIT_COMMITTER_DATE GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL'"
 
+# Undo last format-branch
+	format-branch-undo = reset --hard ORIG_HEAD
+
+[diff]
+	external = /media/Arquivos_do_Windows_8.1/Users/Gustavo/Dropbox/Tarefas/TUTORIAIS/Using_Meld_in_Git_Diff.sh
 [branch]
 	autosetuprebase = always
 [core]
-	editor = subl -n -w
+	editor = subl -w --add
