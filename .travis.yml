@@ -1,0 +1,6 @@
+language: generic
+os:
+  - linux
+install: true
+script:
+  - ./install.sh
