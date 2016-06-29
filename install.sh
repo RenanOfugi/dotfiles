@@ -32,5 +32,5 @@ set -o pipefail
 function null(){
 	return $?;
 }
-grep | null;
+true | null;
 echo "Vamos ver se imprime isso";
