@@ -1,0 +1,10 @@
+[user]
+	name = Gustavo Moraes
+	email = gustavosotnas1@gmail.com
+[alias]
+	format-branch = "filter-branch -f --env-filter 'GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME; GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL; export GIT_COMMITTER_DATE GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL'"
+
+[branch]
+	autosetuprebase = always
+[core]
+	editor = subl -n -w
