@@ -2,5 +2,6 @@ engines:
   shellcheck:
     enabled: true
 ratings:
-  paths: []
+  paths:
+  - "**.sh"
 exclude_paths: []
