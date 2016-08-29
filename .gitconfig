@@ -3,6 +3,8 @@
 	email = gustavosotnas1@gmail.com
 [credential]
 	helper = cache --timeout=86400
+[http]
+	postBuffer = 524288000
 [push]
 	default = matching
 [core]
